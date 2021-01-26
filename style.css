@@ -7,3 +7,23 @@ body {
   padding: 100px;
   background-color: #fffff3;
 }
+.submit-area {
+  margin-top: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px gray;
+  /* Additional CSS */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+}
+input {
+  margin: 5px 0;
+  padding: 5px 10px;
+}
+#login {
+  max-width: 100px;
+}
+#transaction-area {
+  display: none;
+}

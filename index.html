@@ -15,11 +15,32 @@
   </head>
   <body>
     <main>
-      <h1 class="text-center">Welcome To GRINGOTS. World safest Bank.</h1>
       <section>
-        <div class="info">Last Deposit</div>
-        <div class="info">Last Withdraw</div>
-        <div class="info">Balance</div>
+        <div class="login-area">
+          <h1 class="text-center">Welcome To GRINGOTTS. World safest Bank.</h1>
+          <div class="submit-area">
+            <h4>Login</h4>
+            <input
+              type="text"
+              name="email"
+              id=""
+              class="form-control"
+              placeholder="Email"
+            />
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <button class="btn btn-success" id="login" type="submit">
+              Enter
+            </button>
+          </div>
+        </div>
+        <div id="transaction-area">
+          <h1 class="text-center">Transaction Area</h1>
+        </div>
       </section>
     </main>
     <script
@@ -27,5 +48,6 @@
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>
