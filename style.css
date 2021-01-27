@@ -7,11 +7,15 @@ body {
   padding: 100px;
   background-color: #fffff3;
 }
+h1 {
+  font-weight: 600;
+}
 .submit-area {
   margin-top: 50px;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px gray;
+  transition: all 0.3s ease-out 0.1s;
   /* Additional CSS */
   display: grid;
   grid-template-columns: 1fr;
@@ -26,4 +30,38 @@ input {
 }
 #transaction-area {
   display: none;
+  transition: all 0.5s ease;
+}
+.info-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4em;
+  justify-content: space-between;
+}
+.item {
+  padding: 2em;
+  border-radius: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+.deposit {
+  background-color: slateblue;
+}
+.withdraw {
+  background-color: lightsalmon;
+}
+.balance {
+  background-color: orange;
+}
+.trans-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4em;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.trans-item {
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }

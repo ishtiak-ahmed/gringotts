@@ -17,7 +17,10 @@
     <main>
       <section>
         <div class="login-area">
-          <h1 class="text-center">Welcome To GRINGOTTS. World safest Bank.</h1>
+          <h1 class="text-center">
+            Welcome To GRINGOTTS<br />
+            World safest Bank
+          </h1>
           <div class="submit-area">
             <h4>Login</h4>
             <input
@@ -39,7 +42,46 @@
           </div>
         </div>
         <div id="transaction-area">
-          <h1 class="text-center">Transaction Area</h1>
+          <div class="info-items">
+            <div class="item deposit">
+              <h5>Deposit</h5>
+              <h4>$00</h4>
+            </div>
+            <div class="item withdraw">
+              <h5>Withdraw</h5>
+              <h4>$00</h4>
+            </div>
+            <div class="item balance">
+              <h5>Balance</h5>
+              <h4>$1245</h4>
+            </div>
+          </div>
+          <div class="trans-items">
+            <div class="trans-item">
+              <div class="submit">
+                <h3>Deposit</h3>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="$ amount you want to deposit"
+                />
+                <br />
+                <button class="btn btn-success" id="deposit">Deposit</button>
+              </div>
+            </div>
+            <div class="trans-item">
+              <div class="submit">
+                <h3>Withdraw</h3>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="$ amount you want to withdraw"
+                />
+                <br />
+                <button class="btn btn-success" id="withdraw">Withdraw</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
