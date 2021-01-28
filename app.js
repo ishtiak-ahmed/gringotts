@@ -35,15 +35,16 @@ depositBtn.addEventListener('click', function () {
 })
 
 function transaction(type, id) {
-    const amount = parseFloat(document.getElementById(id).value);
+    let amount = parseFloat(document.getElementById(id).value);
     if (type == 'deposit') {
         AccountStatus.deposit += amount;
-        AccountStatus.balance += amount;
     }
     if (type == 'withdraw') {
         AccountStatus.withdraw += amount;
-        AccountStatus.balance -= amount;
+        amount = amount * (-1);
     }
+    AccountStatus.balance += amount;
+
     // Update Interface
     withdrawUI.innerHTML = `$ ${AccountStatus.withdraw}`;
     // Update balance
