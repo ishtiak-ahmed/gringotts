@@ -30,24 +30,33 @@ let withdrawUI = document.querySelector('.withdraw h4');
 
 const depositBtn = document.getElementById('depositBtn');
 depositBtn.addEventListener('click', function () {
-    const depositAmount = parseFloat(document.getElementById("depositAmount").value);
-    AccountStatus.deposit += depositAmount;
-    AccountStatus.balance += depositAmount;
-    // console.log(AccountStatus.deposit);
-    // Update Deposit
-    depositUI.innerHTML = `$ ${AccountStatus.deposit}`;
-    // Update balance
-    balanceUI.innerHTML = `$ ${AccountStatus.balance}`;
+
+    transaction('deposit', 'depositAmount')
 })
-// Withdraw Function
-const withdrawBtn = document.getElementById('withdrawBtn');
-withdrawBtn.addEventListener('click', function () {
-    const withdrawAmount = parseFloat(document.getElementById("withdrawAmount").value);
-    AccountStatus.withdraw += withdrawAmount;
-    AccountStatus.balance -= withdrawAmount;
-    // console.log(AccountStatus.deposit);
-    // Update Deposit
+
+function transaction(type, id) {
+    const amount = parseFloat(document.getElementById(id).value);
+    if (type == 'deposit') {
+        AccountStatus.deposit += amount;
+        AccountStatus.balance += amount;
+    }
+    if (type == 'withdraw') {
+        AccountStatus.withdraw += amount;
+        AccountStatus.balance -= amount;
+    }
+    // Update Interface
     withdrawUI.innerHTML = `$ ${AccountStatus.withdraw}`;
     // Update balance
     balanceUI.innerHTML = `$ ${AccountStatus.balance}`;
+    depositUI.innerHTML = `$ ${AccountStatus.deposit}`;
+
+    // Reset withdraw field
+    document.getElementById(id).value = '';
+
+}
+
+// Withdraw Function
+const withdrawBtn = document.getElementById('withdrawBtn');
+withdrawBtn.addEventListener('click', function () {
+    transaction('withdraw', 'withdrawAmount');
 })
